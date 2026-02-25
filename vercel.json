@@ -1,49 +1,11 @@
 {
-  "version": 2,
-  "name": "word-root-workshop",
-  "builds": [
-    {
-      "src": "**/*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "css/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "js/**",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/learn",
-      "dest": "/learn.html"
-    },
-    {
-      "src": "/roots",
-      "dest": "/roots.html"
-    },
-    {
-      "src": "/root-detail",
-      "dest": "/root-detail.html"
-    },
-    {
-      "src": "/challenge",
-      "dest": "/challenge.html"
-    },
-    {
-      "src": "/progress",
-      "dest": "/progress.html"
-    },
-    {
-      "src": "/flashcard",
-      "dest": "/flashcard.html"
-    }
+  "rewrites": [
+    { "source": "/learn", "destination": "/learn.html" },
+    { "source": "/flashcard", "destination": "/flashcard.html" },
+    { "source": "/roots", "destination": "/roots.html" },
+    { "source": "/root-detail", "destination": "/root-detail.html" },
+    { "source": "/challenge", "destination": "/challenge.html" },
+    { "source": "/progress", "destination": "/progress.html" }
   ],
   "headers": [
     {
