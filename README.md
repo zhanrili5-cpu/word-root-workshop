@@ -38,7 +38,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/你的用户名/word-root-workshop.git
+git clone https://github.com/joeseesun/word-root-workshop.git
 
 # 进入项目目录
 cd word-root-workshop
