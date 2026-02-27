@@ -1,0 +1,47 @@
+{
+  "rewrites": [
+    { "source": "/learn", "destination": "/learn.html" },
+    { "source": "/flashcard", "destination": "/flashcard.html" },
+    { "source": "/roots", "destination": "/roots.html" },
+    { "source": "/root-detail", "destination": "/root-detail.html" },
+    { "source": "/challenge", "destination": "/challenge.html" },
+    { "source": "/progress", "destination": "/progress.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
